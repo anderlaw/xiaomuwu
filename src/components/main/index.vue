@@ -1,10 +1,9 @@
 <template>
-<div>
+<div style="height:100%;">
   <!-- 主题内容 -->
-  <div style="margin-bottom:54px;">
+  <div style="height:calc(100% - 54px);overflow:auto;">
     <router-view></router-view>
   </div>
-
   <tabbar>
     <tabbar-item :selected="currentRoute == '/'" link="/">
       <span slot="icon"   class="iconfont icon-tuijianwei"></span>

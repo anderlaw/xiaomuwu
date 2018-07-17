@@ -22,4 +22,16 @@ body {
   top:0px;
   left:0px;right:0px;
 }
+.clearfix::after{
+  content: '';
+  height: 0;
+  display: block;
+  clear: both;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
 </style>

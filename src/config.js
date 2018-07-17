@@ -8,9 +8,11 @@ import FastClick from 'fastclick'
 FastClick.attach(document.body)
 
 //全局注册组件
-import { Icon,Tabbar,TabbarItem,XInput,Group } from 'vux'
+import { Icon,Tabbar,TabbarItem,XInput,Group, Tab, TabItem } from 'vux'
 Vue.component('icon',Icon)
 Vue.component('tabbar',Tabbar)
 Vue.component('tabbarItem',TabbarItem)
 Vue.component('xInput',XInput)
 Vue.component('group',Group)
+Vue.component('tab',Tab)
+Vue.component('tabItem',TabItem)

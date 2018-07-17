@@ -15,8 +15,8 @@
     <img :src="banner" width="100%" alt="">
   </router-link>
   <!-- 热门推荐 -->
-  <div style="padding:0 20px;line-height:80px;border:1px solid red;">
-    <div style="overflow:auto;">
+  <div style="padding:0 20px;">
+    <div style="overflow:auto;line-height:80px;">
       <strong style="float:left;">热门推荐</strong>
       <span @click="seeMore" style="float:right;font-size:14px;cursor:pointer;">
         更多
@@ -24,40 +24,11 @@
       </span>
     </div>
 
-    <div style="overflow:auto;">
-      <div style="float:left;width:33.33%;box-sizing:border-box;padding:10px;" v-for="(item,index) in bookListRecommend" :key="index">
-        <img :src="item.src" width="100%" alt="">
-        <p> {{ item.description }} </p>
-      </div>
+    <div class="clearfix" style="height:300px;">
+      <Book :src="item.src" :description="item.description" v-for="(item,index) in bookListRecommend" :key="index"/>
     </div>
     <p>
 
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
-      fafafa
     </p>
 
   </div>
@@ -66,18 +37,31 @@
 
 <script>
 import banner from '@/assets/banner.png'
-import book1 from '@/assets/fcf.png'
-import book2 from '@/assets/zfz.png'
+import qfcfImg from '@/assets/fcf.png'
+import zfzImg from '@/assets/zfz.png'
+import fcImg from '@/assets/fc.png'
 
+import shenmiImg from '@/assets/lzsm.png'
+import xialuoImg from '@/assets/xldw.png'
+import huohzeImg from '@/assets/hz.png'
+
+import Book from '@/components/bookitem'
 export default {
+  components:{
+    Book
+  },
   data(){
     return {
       banner:banner,
       value:123,
       bookListRecommend:[
-        { description:'疯传:让你的产品、思想、行为...',src:book1 },
-        { description:'疯传:让你的产品、思想、行为...',src:book2 },
-        { description:'疯传:让你的产品、思想、行为...',src:book1 },
+        { description:'疯传:让你的产品、思想、行为...',src:fcImg },
+        { description:'追风筝的人',src:zfzImg },
+        { description:'强风吹拂',src:qfcfImg },
+
+        { description:'神秘的量子生命',src:shenmiImg },
+        { description:'夏洛的网',src:xialuoImg },
+        { description:'活着',src:huohzeImg },
       ]
     }
   },
